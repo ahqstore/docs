@@ -38,6 +38,10 @@ jobs:
         shell: pwsh
         run: |
           ./build.ps1
+
+      - name: Package
+        shell: pwsh
+        run: |
           ./package.ps1
 
       - name: Upload artifact

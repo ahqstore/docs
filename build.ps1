@@ -14,4 +14,3 @@ Set-Location .\types
 
 pnpm install
 pnpm build:docs
-
