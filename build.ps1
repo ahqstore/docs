@@ -2,6 +2,7 @@ Remove-Item -Force -Recurse client -ErrorAction SilentlyContinue
 
 git clone "https://github.com/ahqstore/client.git"
 
+# @ahqstore/plugin-api
 Set-Location .\client\pkg-ahqstore
 
 npm install
