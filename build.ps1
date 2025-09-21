@@ -5,6 +5,7 @@ git clone "https://github.com/ahqstore/client.git"
 Set-Location .\client\pkg-ahqstore
 
 npm install
+npm run build
 npm run build:docs
 
 Set-Location ..\..
