@@ -4,6 +4,7 @@ Remove-Item '.\documentation\@ahqstore\plugin-api\*' -Recurse -Force -ErrorActio
 Copy-Item '.\client\src-tauri\plugin-script\types\docs\@ahqstore\env-types\*' -Destination '.\documentation\@ahqstore\env-types\' -Recurse -Force
 Copy-Item '.\client\pkg-ahqstore\docs\@ahqstore\plugin-api\*' -Destination '.\documentation\@ahqstore\plugin-api\' -Recurse -Force
 
+npm install
 npm run docs:build
 
 mkdir '.\docs\legacy\@ahqstore\env-types'
