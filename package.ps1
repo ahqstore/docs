@@ -1,3 +1,5 @@
+Remove-Item ".\docs" -Recurse -Force -ErrorAction Continue
+
 Remove-Item '.\documentation\@ahqstore\env-types\*' -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item '.\documentation\@ahqstore\plugin-api\*' -Recurse -Force -ErrorAction SilentlyContinue
 
@@ -7,8 +9,8 @@ Copy-Item '.\client\pkg-ahqstore\docs\@ahqstore\plugin-api\*' -Destination '.\do
 npm install
 npm run docs:build
 
-mkdir '.\docs\legacy\@ahqstore\env-types'
-mkdir '.\docs\legacy\@ahqstore\plugin-api'
+New-Item -Path '.\docs\legacy\@ahqstore\env-types' -ItemType Directory
+New-Item -Path '.\docs\legacy\@ahqstore\plugin-api' -ItemType Directory
 
 Copy-Item '.\client\src-tauri\plugin-script\types\legacy\*' -Destination '.\docs\legacy\@ahqstore\env-types\' -Recurse -Force
 Copy-Item '.\client\pkg-ahqstore\legacy\*' -Destination '.\docs\legacy\@ahqstore\plugin-api\' -Recurse -Force
