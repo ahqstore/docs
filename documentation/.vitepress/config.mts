@@ -13,6 +13,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     aside: false,
+    logo: "/favicon.png",
     nav: [
       { text: 'Home', link: '/' },
       { text: '@ahqstore/plugin-api', activeMatch: '@ahqstore/plugin-api/*', link: '/@ahqstore/plugin-api/' },
@@ -27,7 +28,7 @@ export default defineConfig({
           items: [
             {
               text: "Legacy Doc",
-              link: "/legacy/@ahqstore/plugin-api/"
+              link: "/legacy/@ahqstore/plugin-api/index.html"
             },
             ...pluginApi.map((s) => ({ ...s, collapsed: false }))
           ],
@@ -44,7 +45,7 @@ export default defineConfig({
           items: [
             {
               text: "Legacy Doc",
-              link: "/legacy/@ahqstore/env-types/",
+              link: "/legacy/@ahqstore/env-types/index.html",
             },
             ...pluginScript.map((s) => ({ ...s, collapsed: false }))
           ],
