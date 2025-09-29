@@ -28,7 +28,7 @@ export default defineConfig({
           items: [
             {
               text: "Legacy Doc",
-              link: "/legacy/@ahqstore/plugin-api/index.html"
+              link: "https://ahqstore.github.io/docs/legacy/@ahqstore/plugin-api/index.html"
             },
             ...pluginApi.map((s) => ({ ...s, collapsed: false }))
           ],
@@ -45,7 +45,7 @@ export default defineConfig({
           items: [
             {
               text: "Legacy Doc",
-              link: "/legacy/@ahqstore/env-types/index.html",
+              link: "https://ahqstore.github.io/docs/legacy/@ahqstore/env-types/index.html"
             },
             ...pluginScript.map((s) => ({ ...s, collapsed: false }))
           ],
