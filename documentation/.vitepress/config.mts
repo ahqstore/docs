@@ -8,12 +8,12 @@ import pluginScript from "../../client/src-tauri/plugin-script/types/docs/@ahqst
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "AHQ Store API Docs",
-  description: "Documentation for AHQ Store Packaged durated in 1 site",
+  description: "Documentation for AHQ Store APIs",
   base: "/docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     aside: false,
-    logo: "/favicon.png",
+    logo: "./favicon.png",
     nav: [
       { text: 'Home', link: '/' },
       { text: '@ahqstore/plugin-api', activeMatch: '@ahqstore/plugin-api/*', link: '/@ahqstore/plugin-api/' },
