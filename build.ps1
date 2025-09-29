@@ -8,6 +8,7 @@ Set-Location .\client\pkg-ahqstore
 npm install
 npm run build
 npm run build:docs
+npm run build:docs:legacy
 
 Set-Location ..\..
 
@@ -21,3 +22,4 @@ Set-Location .\types
 
 npm install
 npm run build:docs
+npm run build:docs:legacy

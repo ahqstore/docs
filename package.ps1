@@ -1,12 +1,13 @@
-Remove-Item docs -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item '.\documentation\@ahqstore\env-types\*' -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item '.\documentation\@ahqstore\plugin-api\*' -Recurse -Force -ErrorAction SilentlyContinue
 
-New-Item docs -ItemType Directory
+Copy-Item '.\client\src-tauri\plugin-script\types\docs\@ahqstore\env-types\*' -Destination '.\documentation\@ahqstore\env-types\' -Recurse -Force
+Copy-Item '.\client\pkg-ahqstore\docs\@ahqstore\plugin-api\*' -Destination '.\documentation\@ahqstore\plugin-api\' -Recurse -Force
 
-New-Item docs/@ahqstore/env-types -ItemType Directory
-New-Item docs/@ahqstore/plugin-api -ItemType Directory
+npm run docs:build
 
-Copy-Item .\client\src-tauri\plugin-script\types\docs\* -Destination .\docs\@ahqstore\env-types -Recurse -Force
-Copy-Item .\client\pkg-ahqstore\docs\* -Destination .\docs\@ahqstore\plugin-api -Recurse -Force
+mkdir '.\docs\legacy\@ahqstore\env-types'
+mkdir '.\docs\legacy\@ahqstore\plugin-api'
 
-Copy-Item .\overrides\index.html -Destination .\docs\index.html
-Copy-Item .\overrides\404.html -Destination .\docs\404.html
+Copy-Item '.\client\src-tauri\plugin-script\types\legacy\*' -Destination '.\docs\legacy\@ahqstore\env-types\' -Recurse -Force
+Copy-Item '.\client\pkg-ahqstore\legacy\*' -Destination '.\docs\legacy\@ahqstore\plugin-api\' -Recurse -Force
