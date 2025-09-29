@@ -23,35 +23,35 @@ export default defineConfig({
       '/@ahqstore/plugin-api/': [
         {
           text: '@ahqstore/plugin-api',
-          link: "/@ahqstore/plugin-api",
+          link: "/@ahqstore/plugin-api/",
           items: [
             {
               text: "Legacy Doc",
-              link: "/legacy/@ahqstore/plugin-api"
+              link: "/legacy/@ahqstore/plugin-api/"
             },
-            ...pluginApi
+            ...pluginApi.map((s) => ({ ...s, collapsed: false }))
           ],
         },
         {
           text: '@ahqstore/env-types',
-          link: "/@ahqstore/env-types"
+          link: "/@ahqstore/env-types/"
         },
       ],
       '/@ahqstore/env-types': [
         {
           text: '@ahqstore/env-types',
-          link: "/@ahqstore/env-types",
+          link: "/@ahqstore/env-types/",
           items: [
             {
               text: "Legacy Doc",
-              link: "/legacy/@ahqstore/env-types"
+              link: "/legacy/@ahqstore/env-types/",
             },
-            ...pluginScript
+            ...pluginScript.map((s) => ({ ...s, collapsed: false }))
           ],
         },
         {
           text: '@ahqstore/plugin-api',
-          link: "/@ahqstore/plugin-api"
+          link: "/@ahqstore/plugin-api/"
         },
       ]
     },
