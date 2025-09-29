@@ -12,24 +12,33 @@ export default defineConfig({
   base: "/docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    aside: false,
+    outline: {
+      level: [2, 3]
+    },
     logo: "./favicon.png",
     nav: [
       { text: 'Home', link: '/' },
       { text: '@ahqstore/plugin-api', activeMatch: '@ahqstore/plugin-api/*', link: '/@ahqstore/plugin-api/' },
-      { text: '@ahqstore/env-types', activeMatch: '@ahqstore/env-types/*', link: '/@ahqstore/env-types/' }
+      { text: '@ahqstore/env-types', activeMatch: '@ahqstore/env-types/*', link: '/@ahqstore/env-types/' },
+      {
+        text: "Legacy Docs",
+        items: [
+          { text: '@ahqstore/plugin-api', link: 'https://ahqstore.github.io/docs/legacy/@ahqstore/plugin-api/index.html' },
+          { text: '@ahqstore/env-types', link: 'https://ahqstore.github.io/docs/legacy/@ahqstore/env-types/index.html' }
+        ]
+      }
     ],
 
     sidebar: {
       '/@ahqstore/plugin-api/': [
         {
+          text: "Legacy Documentation",
+          link: "https://ahqstore.github.io/docs/legacy/@ahqstore/plugin-api/index.html"
+        },
+        {
           text: '@ahqstore/plugin-api',
           link: "/@ahqstore/plugin-api/",
           items: [
-            {
-              text: "Legacy Doc",
-              link: "https://ahqstore.github.io/docs/legacy/@ahqstore/plugin-api/index.html"
-            },
             ...pluginApi.map((s) => ({ ...s, collapsed: false }))
           ],
         },
@@ -40,13 +49,13 @@ export default defineConfig({
       ],
       '/@ahqstore/env-types': [
         {
+          text: "Legacy Documentation",
+          link: "https://ahqstore.github.io/docs/legacy/@ahqstore/env-types/index.html"
+        },
+        {
           text: '@ahqstore/env-types',
           link: "/@ahqstore/env-types/",
           items: [
-            {
-              text: "Legacy Doc",
-              link: "https://ahqstore.github.io/docs/legacy/@ahqstore/env-types/index.html"
-            },
             ...pluginScript.map((s) => ({ ...s, collapsed: false }))
           ],
         },
